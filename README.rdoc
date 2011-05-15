@@ -1,10 +1,10 @@
 
-* Sqlite3 to Mysql sql.
+= Sqlite3 to Mysql sql.
 
 Simple script for attempting to convert Sqlite3 sql
 to MySql sql.
 
-* Usage:
+= Usage:
 
 	sqlite3-to-mysql filename.sql > filename.new.sql
 
@@ -12,7 +12,7 @@ or
 
 	echo .dump | sqlite3 db.sqlite3 | sqlite3-to-mysql
 
-* Notes
+= Notes
 
 Please note that sed needs to be in your $PATH
 
