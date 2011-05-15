@@ -6,7 +6,7 @@ sed '{
 	s/CREATE TABLE \(\"\)\(\w\+\)\(\"\)/CREATE TABLE \2/
 	s/CREATE TABLE \(\w\+\)/DROP TABLE IF EXISTS \1;\nCREATE TABLE \1/
 	s/INSERT INTO \(\"\)\(\w\+\)\(\"\)/INSERT INTO \2/
-	s/\(CREATE TABLE.*\)\(PRIMARY KEY\) \(AUTOINCREMENT\)\(.*\)\();\)/\1 AUTO_INCREMENT \4, PRIMARY KEY(id)\5/
+	s/\(CREATE TABLE.*\)\(PRIMARY KEY\) \(AUTOINCREMENT\)\(.*\)\();\)/\1AUTO_INCREMENT\4, PRIMARY KEY(id)\5/
 	/.*sqlite_sequence.*;/ d
 	s/\"/`/g
 }' $1
