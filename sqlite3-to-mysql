@@ -1,0 +1,11 @@
+#/usr/bin/env sh
+cat $1 | \
+sed '/PRAGMA.*;/ d' | \
+sed '/BEGIN TRANSACTION.*/ d' | \
+sed '/COMMIT;/ d' | \
+sed 's/CREATE TABLE \(\"\)\(\w\+\)\(\"\)/CREATE TABLE \2/' | \
+sed 's/CREATE TABLE \(\w\+\)/DROP TABLE IF EXISTS \1;\nCREATE TABLE \1/'| \
+sed 's/INSERT INTO \(\"\)\(\w\+\)\(\"\)/INSERT INTO \2/' | \
+sed 's/\(CREATE TABLE.*\)\(PRIMARY KEY\) \(AUTOINCREMENT\)\(.*\)\();\)/\1 AUTO_INCREMENT \4, PRIMARY KEY(id)\5/' | \
+sed '/.*sqlite_sequence.*;/ d' | \
+sed 's/\"/`/g'
