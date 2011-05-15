@@ -1,0 +1,9 @@
+
+Sqlite3 to Mysql.
+
+Simple script for attempting to convert sqlite3 sql
+to mysql.
+
+Usage:
+sqlite3-to-mysql filename.sql > filename.new.sql
+
