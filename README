@@ -7,3 +7,5 @@ to mysql.
 Usage:
 sqlite3-to-mysql filename.sql > filename.new.sql
 
+Please note that sed needs to be in your $PATH
+
