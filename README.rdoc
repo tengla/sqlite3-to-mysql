@@ -8,10 +8,6 @@ to MySql sql.
 
  sqlite3-to-mysql filename.sql > filename.new.sql
 
-or
-
- echo .dump | sqlite3 db.sqlite3 | sqlite3-to-mysql
-
 == Notes
 
 Please note that sed needs to be in your $PATH
