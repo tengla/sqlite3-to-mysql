@@ -21,6 +21,4 @@ Not guaranteed to work, but can serve as a starting point.
 It worked for my case though.
 
 Decided to make this after trying the yaml_db gem,
-which was so excrutiatingly slow that it's virtually unusable 
-on db's with a size over a few megabytes.
-
+which I found to be excruciatingly slow for any dataset of considerable size.
