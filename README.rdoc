@@ -6,11 +6,11 @@ to MySql sql.
 
 == Usage:
 
- sqlite3-to-mysql filename.sql > filename.new.sql
+sqlite3-to-mysql filename.sql > filename.new.sql
 
 or
 
- echo .dump | sqlite3 db.sqlite3 | sqlite3-to-mysql
+echo .dump | sqlite3 db.sqlite3 | sqlite3-to-mysql
 
 == Notes
 
