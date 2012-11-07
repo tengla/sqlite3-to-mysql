@@ -8,5 +8,6 @@ sed \
 -e 's/"/`/g' \
 -e 's/CREATE TABLE \(`\w\+`\)/DROP TABLE IF EXISTS \1;\nCREATE TABLE \1/' \
 -e 's/\(CREATE TABLE.*\)\(PRIMARY KEY\) \(AUTOINCREMENT\)\(.*\)\();\)/\1AUTO_INCREMENT\4, PRIMARY KEY(id)\5/' \
+-e "s/'t'/1/"
 -e "s/'f'/0/"
 
