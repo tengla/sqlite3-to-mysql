@@ -14,7 +14,7 @@ Please note that sed needs to be in your $PATH
 
 Not guaranteed to work, but can serve as a starting point.
 
-It worked for my case though.
+Note that varchar will be translated to varchar(255).
 
 Decided to make this after trying the yaml_db gem,
 which I found to be excruciatingly slow for any dataset of considerable size.
